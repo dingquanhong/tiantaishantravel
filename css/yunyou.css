@@ -1,0 +1,290 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body,html{
+    scroll-behavior: smooth;
+    /* 【HTML快速实现平滑滚动效果】 https://www.bilibili.com/video/BV1mT411w7b7/?share_source=copy_web&vd_source=da5421291d54749ed187d7f3a22ad7bd */
+}
+::-webkit-scrollbar{
+    display:none;
+}
+.topnav{
+    position: absolute;
+    height: 60px;
+    margin-top: 15px;
+    padding-bottom: 10px;
+    width: 100vw;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+
+}
+.topnav ul{
+    list-style: none;
+}
+.topnav li{
+    
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 60px;
+    font-size: 20px;
+    
+}
+#icon1{
+    position: relative;
+   top: 10px;
+    margin-left: 30px;
+}
+.topnav ul:first-child li:first-child{
+
+    color: #fff;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+.topnav li a{
+    text-decoration: none;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 30px;
+    transition: all 0.5s ease;
+}
+.topnav ul:nth-child(2){
+    float: right;
+    margin-right: 20px;
+}
+.topnav ul:nth-child(2) li:hover a{
+    background: #fff;
+    color: #015778;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(73, 129, 147, .6);
+}
+
+@media screen and (max-width:1135px) {
+    .topnav li{
+    
+        float: left;
+        margin-left: 10px;
+        margin-right: 10px;
+        line-height: 60px;
+        font-size: 18px;
+        
+    }
+    .topnav ul:first-child li:first-child{
+
+        color: #fff;
+        font-family: "微软雅黑";
+        font-weight: bold;
+        font-size: 20px;
+        margin-left: 10px;
+        text-decoration: none;
+    }
+
+}
+#container{
+    width: 100vw;
+    height: 100vh;
+    background: #015778;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+section{
+    height: 100vh;
+    background: linear-gradient( #2781A4 ,#015778);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    scroll-snap-align: start;
+    overflow: hidden;
+}
+section #title{
+    width: 50vw;
+}
+section span{
+    margin-top: 2vh;
+    margin-left: 6vw;
+    margin-right: 6vw;
+    font-size: 1.6em;
+    line-height: 2em;
+}
+@media screen and (max-height:900px){
+    section span{
+        margin-top: 2vh;
+        margin-left: 6vw;
+        margin-right: 6vw;
+        font-size: 1.2em;
+        line-height: 1.8em;
+    }
+    
+}
+section a{
+    
+    text-decoration: none;
+    text-align: center;
+    width: 20vw;
+    margin-top: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 26px;
+    color: #fff;
+    border: #fff 2px solid;
+    border-radius: 36px;
+    transition: all 0.5S ease;
+}
+section a:hover{
+    background: rgba(256, 256, 256, 0.5);
+}
+.img{
+    background-size: 100%;
+    background-position: center;
+    overflow: hidden;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    max-width: 100%;
+} 
+
+
+#cover{
+    background-image: url(../images/yunyou/yunyou.png);
+    background-size: 100%;
+}
+
+    
+
+#ditu{
+    background: url(../images/yunyou/ditu.png);
+    background-size: 100%;
+}
+#ditu img{
+    height: 100vh;
+    
+}
+#ditu p{
+    width: 100vw;
+    text-align: right;
+}
+#guoqing{
+    background: url(../images/yunyou/guoqing.jpg);
+    background-size: 100%;
+}
+#guoqing1{
+    background: url(../images/yunyou/guoqing1.jpg);
+    background-size: 100%;
+}
+#guoqing2{
+    background: url(../images/yunyou/guoqing2.jpg);
+    background-size: 100%;
+}
+
+
+#guoqing3{
+    width: 100vw;
+    height: 80vh;
+    overflow-x: scroll;
+    display: block;
+    background: linear-gradient( #74500a ,#6c3a06);
+    overflow-x: scroll;
+    
+}
+#guoqing3 ul{
+    height: 80vh;
+    width: fit-content;
+    list-style: none;
+    display: flex;
+    background: linear-gradient( #74500a ,#6c3a06);
+    cursor: w-resize;
+}
+#guoqing3 li{
+    float: left;
+}
+#guoqing3 li img{
+    height: 70vh;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 5vh;
+}
+#qiongtai{
+    background: url(../images/yunyou/qiongtai.jpg);
+    background-size: 100%;
+}
+#qiongtai1{
+    background: url(../images/yunyou/qiongtai1.jpg);
+    background-size: 100%;
+}
+#qiongtai2{
+    background: url(../images/yunyou/qiongtai2.png);
+    background-size: 100%;
+}
+#shiliang{
+    background: url(../images/yunyou/shiliang2.jpg);
+    background-size: 100%;
+}
+#shiliang1 video{
+    width: 100vw;
+    float: left;
+}
+#jigong{
+    background: url(../images/yunyou/jigong.jpg);
+    background-size: 100%;
+}
+#jigong1{
+    background: url(../images/yunyou/jigong1.webp);
+    background-size: 100%;
+}
+#jigong2{
+    background: url(../images/yunyou/jigong2.jpg);
+    background-size: 100%;
+}
+#jigong3{
+    background: url(../images/yunyou/jigong3.jpeg);
+    background-size: 100%;
+}
+
+#tongbai1{
+    background: url(../images/yunyou/tongbai1.png);
+    background-size: 100%;
+}
+#tongbai2{
+    background: url(../images/yunyou/tongbai2.jfif);
+    background-size: 100%;
+}
+#tongbai{
+    background: url(../images/yunyou/tongbai3.png);
+    background-size: 100%;
+}
+#huading{
+    background: url(../images/yunyou/huading1.png);
+    background-size: 100%;
+}
+#huading1{
+    background: url(../images/yunyou/huading2.webp);
+    background-size: 100%;
+}
+#huading2{
+    background: url(../images/yunyou/huading4.jpg);
+    background-size: 100%;
+}
+audio{
+    position: relative;
+    height: 50px;
+    width: 100px;
+    opacity: 0.2;
+}
+.music{
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+/* 隐藏audio进度条：https://blog.csdn.net/jnshu_it/article/details/85334329 */

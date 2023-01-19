@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body,html{
+    overflow: hidden;
+}
+.back svg{
+    width: 20vw;
+    height: 4vw;
+    position: absolute;
+    top: 30px;
+    left: -60px;
+    background-size: 100%;
+}
+.option{
+    position: absolute;
+    top: 0;
+    left: 70vw;
+    width: 30vw;
+    height: 100vh;
+    background: #6C3A06;
+}
+.option li{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 3vh;
+    height: 30vh;
+    overflow: hidden;
+}
+
+.content-box{
+
+    position: absolute;
+    width: 60vw;
+    height: 60vh;
+    background: rgba(0,0,0,0.8);
+    animation: rise 1S ease forwards;
+}
+
+@keyframes rise{
+    0% {
+        opacity: 0;
+        top: 100vh;
+    }
+    100%{
+        opacity: 1;
+        top: 40vh;
+    }
+}
+/* 来自：https://blog.csdn.net/shachao888/article/details/45247313 */
+.content{
+    width: 90%;
+    height: 90%;
+    margin-top: 5%;
+    margin-left: 5%;
+    color: #fff;
+    line-height: 2em;
+    
+}
+.content img{
+    
+    width: 60%;
+}
+.content span{
+    font-size: 1.5em;
+    line-height: 2em;
+}
+@media screen and (max-width:1280px) {
+    .content span{
+        font-size: 1.2em;
+        line-height: 2em;
+    }
+}
+audio{
+    position: relative;
+    height: 50px;
+    width: 100px;
+
+}
+.music{
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    z-index: 10;
+    opacity: 0.2;
+}

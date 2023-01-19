@@ -1,0 +1,772 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+::-webkit-scrollbar{
+    display:none;
+}
+/*  */
+.warning-box{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+@media screen and (max-width:1000px) {
+    .warning-box{
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient( #2781A4 ,#015778);
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        visibility: visible;
+    }
+    .warning{
+        width: 90%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .7);
+        z-index: 999;
+        text-align: center;
+    }
+    .warning svg{
+        width: 20vw;
+    }
+    .warning h1{
+        margin-top: 10px;
+        margin-bottom:  10px;
+    }
+    
+    #warning span{
+        font-size: 1.2em;
+        line-height: 2em;
+    }
+    #warning{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+    }
+    .banner,.option,.banquan,.beiban,.cluturecon,.content-bg1,.content-bg2,.content-bg3,.culture,.culture1,.welcome,.navigation{
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+    }
+    body,html{
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+}
+@media screen and (max-height:500px) {
+    .warning-box{
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient( #2781A4 ,#015778);
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        visibility: visible;
+    }
+    .warning{
+        width: 90%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .7);
+        z-index: 999;
+        text-align: center;
+    }
+    .warning svg{
+        width: 20vw;
+    }
+    .warning h1{
+        margin-top: 10px;
+        margin-bottom:  10px;
+    }
+    
+    #warning span{
+        font-size: 1.2em;
+        line-height: 2em;
+    }
+    #warning{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+    }
+    .banner,.option,.banquan,.beiban,.cluturecon,.content-bg1,.content-bg2,.content-bg3,.culture,.culture1,.welcome,.navigation{
+        width: 0;
+        height: 0;
+        display: inline;
+        overflow: hidden;
+        visibility: hidden;
+    }
+
+    body,html{
+        width: 100vw;
+        overflow: hidden;
+        background: #1f465f;
+    }
+    
+}
+/* 导航栏 */
+.navigation{
+    
+    width: 100%;
+    height: 60px;
+    background-color: rgb(21, 40, 30);
+    opacity: calc(0.9);
+    
+}
+#title{
+    position: absolute;
+    color: #fff;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+#icon1{
+    margin-top: 10px;
+    margin-left: 30px;
+}
+#icon2{
+    position: absolute;
+    margin-top: 10px;
+    right: 30px;
+}
+/* banner图&标题 */
+.banner{
+    
+    width: 100%;
+    height: 80%;
+    background: url(../images/index/banner.png) center center no-repeat ;
+    transition: all 0.3S ease-in;
+    
+}
+
+.title-box{
+    
+    position: absolute;
+    
+    width: 30%;
+    height: 30%;
+    margin: auto;
+    margin-top: 10%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, .7);
+}
+.title-box img{
+    width: 90%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+/* 切换 */
+.switch{
+    position: absolute;
+    top: 60px;
+    height: 80%;
+    width: 100%;
+    
+}
+.leftbtn{
+    height: 40%;
+    padding-right: 20px;
+    padding-top: 15%;
+    padding-bottom: 7%;
+    float:left;
+    background: linear-gradient(to right, rgba(43, 96, 143, 0.7) , rgba(63, 113, 150,0));
+    
+}
+.rightbtn{
+    height: 40%;
+    padding-left: 20px;
+    padding-top: 15%;
+    padding-bottom: 7%;
+    float:right;
+    background: linear-gradient(to left, rgba(43, 96, 143,.7) , rgba(63, 113, 150,0));
+   
+}
+
+
+
+/* 四个选项 */
+.option{
+    height: 150px;
+}
+.option2{
+    visibility: hidden;
+}
+.option ul{
+    
+    position: absolute;
+    top: 55%;
+    left: 10%;
+    width: 80%;
+    height: 300px;
+    margin: 0 auto;
+    list-style: none;
+    text-align: center;
+}
+.option li{
+    
+    opacity: calc(1);
+    position:absolute;
+    width: 22%;
+    height: 280px;
+    min-width: 180px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow:2px 2px 10px rgba(0, 0, 0, .2);
+    text-align: center;
+    transition: all 0.3S;
+}
+
+#li2{
+
+    left: 25%;
+}
+#li3{
+    left: 50%;
+}
+#li4{
+    left: 75%;
+}
+
+svg{
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    transition: all 0.3S ease;
+}
+p{
+    margin-top: 5px;
+    font-size: small;
+}
+.li1{
+    transition: all 0.3S ease;
+}
+.li2{
+    transition: all 0.3S ease;
+}
+.li3{
+    transition: all 0.3S ease;
+}
+.li4{
+    transition: all 0.3S ease;
+}
+#li1:hover .li1{
+    color: blueviolet;
+    
+}
+#li1:hover{
+    box-shadow:0px 0px 10px rgba(162, 91, 244, .5);
+}
+#li2:hover{
+    box-shadow:0px 0px 10px rgba(255, 51, 105 ,.5);
+}
+#li3:hover{
+    box-shadow:0px 0px 10px rgba(252, 112, 50, .5);
+}
+#li4:hover{
+    box-shadow:0px 0px 10px rgba(5, 196, 109, .5);
+}
+#li2:hover .li2{
+    color: #ff3369;
+}
+#li3:hover .li3{
+    color: #fc7032;
+}
+#li4:hover .li4{
+    color: #05c46d;
+}
+@media screen and (max-width:1200px) {
+    .option svg{
+        width: 80px;
+        height: 80px;
+    }
+    .option h1{
+        font-size: 1.6em;
+    }
+    .option li{
+        position: absolute;
+        width: 18%;
+        height: 220px;
+    }
+
+    
+}
+/* 内容背景 */
+.content-bg1{
+    width: 100%;
+    height: 1120px;
+    background: url(../images/index/content-bg1.png) no-repeat;
+}
+@media screen and (max-width:1200px){
+    .content-bg1{
+        width: 100%;
+        height: 1180px;
+        background: url(../images/index/content-bg1.png) no-repeat;
+    }
+}
+/* 天台概况 */
+
+.intro{
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 30px;
+    height: 500px;
+    
+}
+.introimg{
+    float: left;
+    overflow: hidden;
+    width: 60%;
+    height: 500px;
+    
+}
+.introimg img{
+    
+    transition: all 10S ease;
+}
+.introimg:hover img{
+    transform: scale(1.1);
+}
+.introcon-box{
+    
+    float: right;
+    width: 40%;
+    height: 500px;
+    background: #1f465f;
+    color: #fff;
+}
+.introcon{
+    margin: 30px 30px;
+    
+    
+}
+.introcon h1{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.introcon span{
+    line-height: 2em;
+}
+.introcon button{
+    cursor: pointer;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    height: 40px;
+    width: 150px;
+    margin-right: 10px;
+    float: right;
+    background-color: rgba(256, 256, 256, .2);
+    border: #fff 1px solid;
+    border-radius: 2px;
+    font-size: 16px;
+    color: #fff;
+    transition: all 0.2S ease-in;
+}
+.introcon button:hover{
+    background-color: rgba(256, 256, 256, .7);
+    color: #1f465f;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1200px) { /*自适应*/
+    .intro{
+        height: 600px;
+    }
+    .introimg{
+        height: 600px;
+    }
+    .itroimg img{
+        height: 600px;
+    }
+    .introcon-box{
+        height: 600px;
+    }
+}
+
+/* 和合文化 */
+.hehe{
+    margin-top: 50px;
+    height: 600px;
+}
+.hehe h1{
+    text-align: center;
+    font-family: "华文中宋";
+    color: #ae8f18;
+}
+.hehebox{
+    position: absolute;
+    margin-top: 50px;
+    width: 80%;
+    margin-left: 10%;
+    background-color: #000;
+    border-radius: 15px;
+    height: 400px;
+    overflow: hidden;
+    text-align: center;
+    
+}
+.hehebox button{
+    z-index: 2;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    border: none;
+    top: 300px;
+    margin-left: 20px;
+
+}
+.hehebox button svg{
+    margin: auto;
+}
+#video1{
+    z-index: 1;
+    height: 400px;
+    width: auto;
+    position: relative;
+}
+#video2{
+    z-index: 0;
+    filter: blur(20px);
+    left: -10%;
+    top: -200px;
+    position: absolute;
+    width: 120%;
+}
+/* 文化遗产 */
+.content-bg2{
+    background: url(../images/index/content-bg2.png) no-repeat center center;
+}
+.culture{
+    
+    position: relative;
+    width: 80%;
+    margin-left: 10%;
+    height: 600px;
+}
+.culture h1{
+    color: #ae8f18;
+    text-align: center;
+    font-family: "华文中宋";
+}
+.divider{
+    height: 18px;
+    background: url(../images/index/Divider.png) no-repeat center center;
+}
+
+
+.culturebox{
+    margin-top: 40px;
+    height: 400px;
+}
+
+.culture1{
+    position: absolute;
+    height: 400px;
+    width: 60%;
+    background: url(../images/index/culturalheritages1.jpg) no-repeat center center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .8) inset;
+}
+.culture2{
+    position: relative;
+    left: 60%;
+    top: 0px;
+    width: 20%;
+    height: 200px;
+    background: url(../images/index/culturalheritages2.jpg) no-repeat center center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .8) inset;
+}
+.culture3{
+    width: 20%;
+    height: 200px;
+    position: relative;
+    left: 80%;
+    top: -200px;
+    background: url(../images/index/culturalheritages3.jpg) no-repeat center center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .8) inset;
+}
+.culture4{
+    width: 20%;
+    height: 200px;
+    position: relative;
+    left: 60%;
+    top: -200px;
+    background: url(../images/index/culturalheritages4.png) no-repeat center center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .8) inset;
+}
+.culture5{
+    width: 20%;
+    height: 200px;
+    position: relative;
+    left: 80%;
+    top: -400px;
+    background: url(../images/index/culturalheritages5.jpg) no-repeat center center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .8) inset;
+}
+
+#cluturetext{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    top: 150px;
+    background: rgba(0, 0, 0, .7);
+    line-height: 50px;
+    color: #fff;
+    
+    transition: all 0.6S ease-in;
+} 
+.culture1 #cluturetext{
+    top: 350px;
+}
+.cluturecon{
+    transition: all 0.5S ease-in-out ;
+    transition-delay: 0.2s;
+    opacity: calc(0);
+    filter: blur(6px);
+    line-height: 1.6em;
+    position: relative;
+    width: 80%;
+    color: #fff;
+    margin: auto;
+    margin-top: 320px;
+}
+.culture1:hover .cluturecon{
+        opacity: calc(1);
+        
+        position: relative;
+        width: 80%;
+        color: #fff;
+        margin: auto;
+        margin-top: 120px;
+        filter: blur(0px);
+}
+.culture1:hover.culture1 #cluturetext{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, .8);
+    line-height: 120px;
+    color: #fff;
+    font-size: 50px;
+    top: 0px;
+}
+
+.divderbtom{
+    margin-top: 10px;
+    height: 50px;
+    background: url(../images/index/Dividerbottom.png) no-repeat center center;
+}
+
+.culture2:hover.culture2 #cluturetext,.culture3:hover.culture3 #cluturetext,
+.culture4:hover.culture4 #cluturetext,.culture5:hover.culture5 #cluturetext
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, .7);
+    line-height: 200px;
+    font-size: 20px;
+    color: #fff;
+    top: 0px;
+}
+
+/* 天台特产 */
+.content-bg3{
+    height: 550px;
+    background: url(../images/index/techan_bg.png);
+
+}
+.techan{
+    
+    width: 80%;
+    margin-left: 10%;
+    overflow: hidden;
+    
+}
+.techan ul{
+    margin-top: 50px;
+    list-style: none;
+    height: 450px;
+}
+.techan li{
+    width: 20%;
+    float: left;
+    overflow: hidden;
+    transition: all 0.8S ease;
+    height: 450px;
+    text-align: center;
+}
+.techan img{
+    border-left: 2px solid #fff;
+    transition: all 0.8S ease-in;
+}
+.techan:hover li{
+    width: 5%;
+}
+.techan li:hover{
+    width: 80%;
+}
+
+.techan .introduction{
+    position: relative;
+    left: 0;
+    top: -120px;
+    height: 120px;
+    position: relative;
+    background: linear-gradient( rgba(255, 255, 255, 0) , rgb(0, 0, 0));
+    color: #fff;
+    overflow: hidden;
+}
+.techan .introduction h2{
+    text-align: center;
+    position: relative;
+    top: 60px;
+    line-height: 60px;
+    margin-bottom: 5px;
+}
+
+.techan:hover .introduction h2{
+    visibility: hidden;
+}
+.techan li:hover .introduction h2{
+    visibility: visible;
+}
+/* 欢迎 */
+.welcome{
+    position: relative;
+    top: -120px;
+    width: 100%;
+    height: 100%;
+    background: url(../images/index/welcome.png) no-repeat center center;
+    background-size: 100% 100%;
+}
+
+/* 版权信息 */
+.banquan{
+    position: relative;
+    top: -200px;
+    width: 90%;
+    height: 320px;
+    margin-left: 5%;
+    overflow: hidden;
+}
+.banquan h3{
+    color: #1f465f;
+}
+.logo{
+    width: 30%;
+    text-align: center;
+}
+.author{
+    margin-top: 10px;
+    width: 30%;
+    height: 100px;
+}
+.author ul{
+    list-style: none;
+}
+.author h3{
+    margin-bottom: 5px;
+}
+.author li span:first-child{
+    font-weight: bold;
+    line-height: 1.8em;
+}
+.relatedlink{
+    position: absolute;
+    left: 30%;
+    top: 0;
+    margin-left: 100px;
+    line-height: 2em;
+    
+}
+.relatedlink ul{
+    list-style: none;
+}
+.feedback{
+    width: 30%;
+    position:absolute;
+    left: 60%;
+    top: 0;
+}
+.feedback span{
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.feedback input,.feedback textarea{
+    border: #000 1px solid;
+    border-radius: 2px;
+}
+
+.feedback #style1{
+    width: 80%;
+    height: 30px;
+    margin-top: 10px;
+}
+.feedback #style2{
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+}
+.feedback #style3{
+    width: 40px;
+    height: 30px;
+    margin-top: 10px;
+    float:right;
+    background: #ae8f18;
+    color: #fff;
+    border-radius: 2px;
+    border: none;
+}
+
+/* 备案 */
+.beiban{
+    
+    width: 100%;
+    height: 30px;
+    position: relative;
+    top: -180px;
+    background: #1f465f;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+}
